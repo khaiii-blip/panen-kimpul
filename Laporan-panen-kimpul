@@ -1,0 +1,189 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMo+zIonl/ssEXg4Do1SyI1",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/khaiii-blip/panen-kimpul/blob/laporan/Laporan-panen-kimpul\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kEXGOe4u5DDM",
+        "outputId": "1218a825-ea29-49f3-b2a5-e59828d73698"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cloning into 'panen-kimpul'...\n",
+            "remote: Enumerating objects: 14, done.\u001b[K\n",
+            "remote: Counting objects: 100% (14/14), done.\u001b[K\n",
+            "remote: Compressing objects: 100% (12/12), done.\u001b[K\n",
+            "remote: Total 14 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)\u001b[K\n",
+            "Receiving objects: 100% (14/14), 5.48 KiB | 5.48 MiB/s, done.\n",
+            "Resolving deltas: 100% (5/5), done.\n"
+          ]
+        }
+      ],
+      "source": [
+        "!git clone https://github.com/khaiii-blip/panen-kimpul.git"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%cd panen-kimpul"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e81OAyrm5uBr",
+        "outputId": "5ab128ea-470f-45dc-c0e6-5edb98adef96"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "/content/panen-kimpul\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git config user.name \"Erliana Rahmadani\"\n",
+        "!git config user.email \"erlianarahmadani30@gmail.com\""
+      ],
+      "metadata": {
+        "id": "W1PMV1xv5-0E"
+      },
+      "execution_count": 3,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git pull origin main"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EDKY_2vq6H2s",
+        "outputId": "df3f5154-ba5c-4c47-964a-05d35e83d2fd"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "From https://github.com/khaiii-blip/panen-kimpul\n",
+            " * branch            main       -> FETCH_HEAD\n",
+            "Already up to date.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git switch -c laporan"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9mlAfDHH6MOo",
+        "outputId": "7f828d69-4579-45ee-e4a5-379b0041060e"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Switched to a new branch 'laporan'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def buat_laporan(nama_petani, jumlah_panen, harga_per_kg):\n",
+        "    total = jumlah_panen * harga_per_kg\n",
+        "\n",
+        "    print(\"\\n================================\")\n",
+        "    print(\"     LAPORAN PANEN KIMPUL\")\n",
+        "    print(\"================================\")\n",
+        "    print(\"Nama petani  :\", nama_petani)\n",
+        "    print(\"Jumlah panen :\", jumlah_panen, \"kg\")\n",
+        "    print(\"Harga per kg : Rp\", harga_per_kg)\n",
+        "    print(\"Total hasil  : Rp\", total)"
+      ],
+      "metadata": {
+        "id": "UZ9TvgBH6i1J"
+      },
+      "execution_count": 8,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git add .\n",
+        "!git commit -m \"menambahkan laporan\"\n",
+        "!git push -u origin laporan"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eFDkK4hP7h33",
+        "outputId": "7d2fa0ae-75fb-4856-a230-d05410c5baeb"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "On branch laporan\n",
+            "nothing to commit, working tree clean\n",
+            "fatal: could not read Username for 'https://github.com': No such device or address\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
